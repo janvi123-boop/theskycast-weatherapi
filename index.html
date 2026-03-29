@@ -17,22 +17,22 @@
     <div class="flex justify-center items-center p-4 m-4">
          <b class="text-4xl">The Sky Cast</b>
     </div>
-    <div class="box flex flex-col items-center bg-white mx-auto w-full max-w-xl rounded border-4 border-blue-500 p-40 "id="bgc">
+    <div class="box flex flex-col items-center bg-white mx-auto w-full max-w-xl rounded border-4 border-blue-500 p-40 shadow-lg"id="bgc">
         <div class="sb space-y-4 ">
-        <input type="text" placeholder="enter city" class="bg-blue-200 border-blue-500 border-2 rounded placeholder-black"id="cin"/>
-        <button class="bg-blue-200 border-2 border-blue-500 rounded" id="btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        <input type="text" placeholder="enter city" class="bg-blue-200 border-blue-500 border-2 rounded placeholder-black shadow-sm"id="cin"/>
+        <button class="bg-blue-200 border-2 border-blue-500 rounded shadow-md" id="btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </div>
         <br></br>
         <div class="weathercard grid sm:grid-cols-2 grid-cols-1 gap-14 m-10 font-medium-bold">
-            <h2 id="c">city</h2>
+            <h2 id="c" class="font-bold">City</h2>
             <div class="flex items-center gap-2">
                 <p id="icon"></p>
-                <h2 id="t">temperature</h2>
+                <h2 id="t" class="font-bold">Temperature</h2>
             </div>
-            <h3 id="wd">weather</h3>
-            <h4 id="h">humidity</h4>
+            <h3 id="wd" class="font-bold">Weather</h3>
+            <h4 id="h" class="font-bold">Humidity</h4>
         </div>
-        <h2 id="error" class="text-red-600"></h2>
+        <h2 id="error" class="text-red-600 font-bold"></h2>
     </div>
     <script src="script.js"></script>
 </body>
