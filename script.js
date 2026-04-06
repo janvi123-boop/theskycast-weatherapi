@@ -33,9 +33,9 @@ async function getweather(city){
         document.body.style.backgroundColor="blue-200";
     }
     else{
-        c.innerText=city;
-        t.innerText=data.main.temp+"\u00B0C";
-        wd.innerText=data.weather[0].description;
+        c.innerText="city-\n"+city;
+        t.innerText="temperature-\n"+data.main.temp+"\u00B0C";
+        wd.innerText="Weather-\n"+data.weather[0].description;
         h.innerText="humidity="+data.main.humidity+"%";
         input.value="";
         err.innerText="";
@@ -67,4 +67,4 @@ const bgColors = {
   Fog: "#708090",
   Haze: "#C0C0C0"
 };
-
+icon.style.fontSize = "50px";
