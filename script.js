@@ -41,8 +41,10 @@ async function getweather(city){
         err.innerText="";
         wm=data.weather[0].main;
         icon.innerText=icons[wm] ;
-        document.body.style.backgroundColor = bgColors[wm];
-
+        document.body.style.backgroundImage = bgImages[wm];
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
     }
 }
 const icons = {
@@ -56,15 +58,15 @@ const icons = {
   Fog: "🌫️",
   Haze: "🌫️"
 };
-const bgColors = {
-  Clear: "#87CEEB",       
-  Clouds: "#B0C4DE",     
-  Rain: "#4682B4",        
-  Drizzle: "#5F9EA0",     
-  Thunderstorm: "#2F4F4F",
-  Snow: "#E0FFFF",        
-  Mist: "#778899",        
-  Fog: "#708090",
-  Haze: "#C0C0C0"
+const bgImages = {
+  Clear: "url('clear.jpg')",
+  Clouds: "url('cloud.jpg')",
+  Rain: "url('rain.jpg')",
+  Drizzle: "url('drizzle.jpg')",
+  Thunderstorm: "url('thunderstorm.jpg')",
+  Snow: "url('snow.jpg')",
+  Mist: "url('fog.jpg')",
+  Fog: "url('fog.jpg')",
+  Haze: "url('haze.jpg')"
 };
 icon.style.fontSize = "50px";

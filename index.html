@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyCast</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyCast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
-<body class="bg-blue-200 ">
-    <div class="flex justify-center items-center p-4 m-4">
-         <b class="text-4xl">The Sky Cast</b>
+<body class="bg-blue-200 min-h-screen bg-cover bg-center">
+  <div class="flex justify-center items-center p-6">
+    <b class="text-4xl text-white">The Sky Cast</b>
+  </div>
+  <div class="flex w-full max-w-md rounded-lg shadow-md overflow-hidden mx-auto mb-6">
+    <input 
+      type="text" 
+      id="cin" 
+      placeholder="Enter city..." 
+      class="w-full px-4 py-2 text-gray-700 focus:outline-none"
+    />
+    <button 
+      id="btn" 
+      class="bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition"
+    >
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+  <div class="bg-transparent text-white rounded-xl shadow-lg p-6 md:p-10 lg:p-16 w-80 md:w-[800px] mx-auto">
+    <div class="flex flex-col items-center space-y-2">
+      <p id="icon" class="text-5xl">☀️</p>
+      <h2 id="t" class="text-3xl font-bold">--°C</h2>
+      <h3 id="c" class="text-xl">City</h3>
     </div>
-    <div class="box flex flex-col items-center bg-white mx-auto w-full max-w-xl rounded border-4 border-blue-500 p-6 sm:p-20 md:p-40shadow-lg"id="bgc">
-        <div class="sb space-y-4 ">
-        <input type="text" placeholder="enter city" class="bg-blue-200 border-blue-500 border-2 rounded placeholder-black shadow-sm"id="cin"/>
-        <button class="bg-blue-200 border-2 border-blue-500 rounded shadow-md" id="btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        </div>
-        <br></br>
-        <div class="weathercard grid sm:grid-cols-2 grid-cols-1 gap-14 m-10 font-medium-bold">
-            <h2 id="c" class="font-bold">City</h2>
-            <div class="flex items-center gap-2">
-                <p id="icon"></p>
-                <h2 id="t" class="font-bold">Temperature</h2>
-            </div>
-            <h3 id="wd" class="font-bold">Weather</h3>
-            <h4 id="h" class="font-bold">Humidity</h4>
-        </div>
-        <h2 id="error" class="text-red-600 font-bold"></h2>
+
+    <div class="flex justify-between mt-6 md:text-xl text-sm sm:text-md">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-water"></i>
+        <p id="h">Humidity: --%</p>
+      </div>
+      <div class="flex items-center space-x-2">
+        <p id="wd"></p>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <p id="error" class="text-red-700 font-bold mt-2 animate-pulse"></p>
+  </div>
+  <script src="script.js"></script>
+  <div class="flex flex-col min-h-screen">
+</div>
 </body>
 </html>
