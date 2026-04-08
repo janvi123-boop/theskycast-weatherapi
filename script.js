@@ -30,7 +30,8 @@ async function getweather(city){
         h.innerText="";
         input.value="";
         icon.innerText="";
-        document.body.style.backgroundColor="blue-200";
+        document.body.style.backgroundColor = "#bfdbfe"; 
+        document.body.style.backgroundImage = "none";
     }
     else{
         c.innerText="city-\n"+city;
@@ -70,3 +71,14 @@ const bgImages = {
   Haze: "url('haze.jpg')"
 };
 icon.style.fontSize = "50px";
+function preloadImages() {
+  const imageFiles = [
+    "clear.jpg", "cloud.jpg", "rain.jpg", "drizzle.jpg",
+    "thunderstorm.jpg", "snow.jpg", "fog.jpg", "haze.jpg"
+  ];
+  imageFiles.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+preloadImages();
